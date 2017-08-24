@@ -2,7 +2,7 @@
 # JavaScript Plus
 Syntax highlighting for template strings in Atom.
 
-##Triggers
+## Triggers
 - `template: `
 - `html: `
 - `html = `
