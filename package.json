@@ -1,0 +1,34 @@
+{
+  "name": "language-javascript-plus",
+  "version": "1.0.0",
+  "description": "JavaScript Plus syntax highlighting for template strings in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "author": "Alexander Elias",
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderElias/language-javascript-plus.git"
+  },
+  "keywords": [
+    "language",
+    "javascript",
+    "plus",
+    "template",
+    "literals",
+    "syntax",
+    "highliting"
+  ],
+  "bugs": {
+    "url": "https://github.com/AlexanderElias/language-javascript-plus/issues"
+  },
+  "homepage": "https://github.com/AlexanderElias/language-javascript-plus#readme"
+}
