@@ -1,11 +1,18 @@
 
 # JavaScript Plus
-Syntax highlighting for template strings in Atom.
+Syntax highlighting for template strings in Atom. Currently supporting HTML and CSS highlighting. 
 
 ## Triggers
+- `innerHTML = `
+
 - `template: `
+- `template = `
+
 - `html: `
 - `html = `
-- `template = `
+
 - `style: `
 - `style = `
+
+- `css: `
+- `css = `
