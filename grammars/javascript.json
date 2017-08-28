@@ -1,14 +1,14 @@
 {
 	"name": "JavaScriptPlus",
 	"scopeName": "source.js",
-	"injectionSelector": "L:source.js - text.html.js",
+	"injectionSelector": "L:source.js",
 	"patterns": [
-		{ "include": "#html" },
-		{ "include": "#css" }
+		{ "include": "#html-template" },
+		{ "include": "#css-template" }
 	],
 	"repository": {
-		"html": {
-			"begin": "\\.?\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(:|\\+?=)\\s*(`)",
+		"html-template": {
+			"begin": "\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
 				"2": {
 					"name": "keyword.operator.assignment.js"
@@ -31,14 +31,11 @@
 					"include": "#interpolated_js"
 				},
 				{
-					"include": "#var"
-				},
-				{
 					"include": "text.html.basic"
 				}
 			]
 		},
-		"css": {
+		"css-template": {
 			"begin": "\\.?\\s*(style|Style|STYLE|css|Css|CSS)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
 				"2": {
@@ -62,26 +59,9 @@
 					"include": "#interpolated_js"
 				},
 				{
-					"include": "#var"
-				},
-				{
 					"include": "source.css"
 				}
 			]
-		},
-		"var": {
-			"begin": "\\$\\{",
-			"beginCaptures": {
-				"0": {
-					"name": "variable.language.js"
-				}
-			},
-			"end": "\\}",
-			"endCaptures": {
-				"0": {
-					"name": "variable.language.js"
-				}
-			}
 		}
 	}
 }
