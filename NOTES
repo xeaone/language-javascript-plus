@@ -1,4 +1,27 @@
 
 Could add text turns green though:
-	"contentName": "string.quoted.template.html.js",
-	"contentName": "string.quoted.template.css.js",
+
+"injectionSelector": "L:source.js",
+
+"contentName": "string.quoted.template.html.js",
+"contentName": "string.quoted.template.css.js",
+
+"fileTypes": [
+	"js",
+	"_js",
+	"es",
+	"es6",
+	"gs",
+	"htc",
+	"jscad",
+	"jslib",
+	"jsm",
+	"json5",
+	"jspre",
+	"mjs",
+	"pac",
+	"pjs",
+	"sjs",
+	"xsjs",
+	"xsjslib"
+],

@@ -1,0 +1,66 @@
+{
+	"name": "JavaScriptPlus",
+	"scopeName": "source.js",
+	"injections": {
+		"source.js": {
+			"patterns": [
+				{
+					"begin": "(`)(\\s*<!--\\s*html\\s*-->\\s*)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.string.begin.js"
+						},
+						"2": {
+							"name": "text.html.basic"
+						}
+					},
+					"end": "`",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.js"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#string_escapes"
+						},
+						{
+							"include": "#interpolated_js"
+						},
+						{
+							"include": "text.html.basic"
+						}
+					]
+				},
+				{
+					"begin": "(`)\\s*\\/\\*\\s*css\\*\\/",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin.js"
+						}
+					},
+					"end": "`",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end.js"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#string_escapes"
+						},
+						{
+							"include": "#interpolated_js"
+						},
+						{
+							"include": "source.css"
+						}
+					]
+				},
+				{
+					"include": "source.js"
+				}
+			]
+		}
+	}
+}

@@ -1,19 +1,15 @@
 {
-	"scopeName": "source.js",
 	"name": "JavaScriptPlus",
-	"injectionSelector": "L:source.js",
+	"scopeName": "source.js",
+	"injectionSelector": "L:source.js - text.html.js",
 	"patterns": [
-		{ "include": "#ihtml" },
 		{ "include": "#html" },
 		{ "include": "#css" }
 	],
 	"repository": {
-		"ihtml": {
-			"begin": "\\.(innerHTML)\\s*(\\+?=)\\s*(`)",
+		"html": {
+			"begin": "\\.?\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
-				"1": {
-					"name": "variable.language.js"
-				},
 				"2": {
 					"name": "keyword.operator.assignment.js"
 				},
@@ -35,32 +31,7 @@
 					"include": "#interpolated_js"
 				},
 				{
-					"include": "text.html.basic"
-				}
-			]
-		},
-		"html": {
-			"begin": "((template|Template|TEMPLATE)|(html|Html|HTML))\\s*(:|=)\\s*(`)",
-			"beginCaptures": {
-				"4": {
-					"name": "keyword.operator.assignment.js"
-				},
-				"5": {
-					"name": "punctuation.definition.string.begin.js"
-				}
-			},
-			"end": "`",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.js"
-				}
-			},
-			"patterns": [
-				{
-					"include": "#string_escapes"
-				},
-				{
-					"include": "#interpolated_js"
+					"include": "#var"
 				},
 				{
 					"include": "text.html.basic"
@@ -68,12 +39,12 @@
 			]
 		},
 		"css": {
-			"begin": "((style|Style|STYLE)|(css|Css|CSS))\\s*(:|=)\\s*(`)",
+			"begin": "\\.?\\s*(style|Style|STYLE|css|Css|CSS)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
-				"4": {
+				"2": {
 					"name": "keyword.operator.assignment.js"
 				},
-				"5": {
+				"3": {
 					"name": "punctuation.definition.string.begin.js"
 				}
 			},
@@ -91,9 +62,26 @@
 					"include": "#interpolated_js"
 				},
 				{
+					"include": "#var"
+				},
+				{
 					"include": "source.css"
 				}
 			]
+		},
+		"var": {
+			"begin": "\\$\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "variable.language.js"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "variable.language.js"
+				}
+			}
 		}
 	}
 }

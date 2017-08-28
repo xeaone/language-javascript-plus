@@ -1,12 +1,12 @@
 {
   "name": "language-javascript-plus",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "JavaScript Plus syntax highlighting for template strings in Atom",
   "engines": {
     "atom": "*"
   },
   "scripts": {
-    "test": ""
+    "link": "ln -sf ~/Documents/language-javascript-plus ~/.atom/dev/packages/language-javascript-plus"
   },
   "author": "Alexander Elias",
   "license": "MPL-2.0",

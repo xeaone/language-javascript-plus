@@ -5,36 +5,104 @@
 
 var o = {
 	template: `
-		<div>hello world</div>
+		<div>${template}</div>
 	`,
-	la: '',
+	html: `
+		<div>${html}</div>
+	`,
+	none: `
+		<div>${none}</div>
+	`
 };
 
-var template = `
-	<div>${textVar}</div>
+o.template = `
+	<div>${template}</div>
 `;
 
-/*
-	innerHTML
-*/
-var e1, e2;
+o.html = `
+	<div>${html}</div>
+`;
 
-e1.innerHTML = `
+o.none = `
+	<div>${none}</div>
+`;
+
+o.innerHTML = `
 	<style>.class { color: blue }</style>
 	<div class="foo">e1</div>
 `;
 
-e2.innerHTML += `
+o.innerHTML += `
 	<div id="bar">e2</div>
+`;
+
+var template = `
+	<div>${template}</div>
+`;
+
+var html = `
+	<div>${html}</div>
+`;
+
+var none =  `
+	<div>${none}</div>
 `;
 
 /*
 	CSS
 */
 
+var o2 = {
+	css: `
+		.class {
+			color: url('asdfas');
+		}
+	`,
+	style: `
+		.class {
+			color: url('asdfas');
+		}
+	`,
+	none: `
+		.class {
+			color: url('asdfas');
+		}
+	`
+};
+
+o2.css = `
+	.class {
+		color: url('asdfas');
+	}
+`;
+
+o2.style = `
+	.class {
+		color: url('asdfas');
+	}
+`;
+
+o2.none = `
+	.class {
+		color: url('asdfas');
+	}
+`;
+
+var css = `
+	.class {
+		color: url('asdfas');
+	}
+`;
+
 var style = `
 	.class {
-		background-color: url('asdfas');
+		color: url('asdfas');
+	}
+`;
+
+var none =  `
+	.class {
+		color: url('asdfas');
 	}
 `;
 
