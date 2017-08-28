@@ -3,10 +3,74 @@
 	"scopeName": "source.js",
 	"injectionSelector": "L:source.js",
 	"patterns": [
+		{ "include": "#html-dot-template" },
+		{ "include": "#css-dot-template" },
 		{ "include": "#html-template" },
 		{ "include": "#css-template" }
 	],
 	"repository": {
+		"html-dot-template": {
+			"begin": "\\.(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(\\+?=)\\s*(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "variable.language.js"
+				},
+				"2": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+		"css-dot-template": {
+			"begin": "\\.(style|Style|STYLE|css|Css|CSS)\\s*(\\+?=)\\s*(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "variable.language.js"
+				},
+				"2": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "source.css"
+				}
+			]
+		},
 		"html-template": {
 			"begin": "\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
@@ -36,7 +100,7 @@
 			]
 		},
 		"css-template": {
-			"begin": "\\.?\\s*(style|Style|STYLE|css|Css|CSS)\\s*(:|\\+?=)\\s*(`)",
+			"begin": "\\s*(style|Style|STYLE|css|Css|CSS)\\s*(:|\\+?=)\\s*(`)",
 			"beginCaptures": {
 				"2": {
 					"name": "keyword.operator.assignment.js"
