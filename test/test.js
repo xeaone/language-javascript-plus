@@ -15,7 +15,7 @@ var o = {
 	`
 };
 
-o.template = `
+o.la.template = `
 	<div>${template}</div>
 `;
 
