@@ -1,7 +1,7 @@
 {
 	"name": "JavaScriptPlus",
 	"scopeName": "source.js",
-	"injectionSelector": "text.html.js, L:source.js",
+	"injectionSelector": "source.js",
 	"patterns": [
 		{ "include": "#html-dot-template" },
 		{ "include": "#css-dot-template" },
