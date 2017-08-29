@@ -6,8 +6,9 @@
     "atom": "*"
   },
   "scripts": {
-    "rm": "rm -r ~/.atom/dev/packages/language-javascript-plus",
-    "cp": "cp -r . ~/.atom/dev/packages/language-javascript-plus"
+    "rm": "rm -rf ~/.atom/dev/packages/language-javascript-plus",
+    "cp": "cp -r ~/Documents/language-javascript-plus ~/.atom/dev/packages/.",
+	"l": "npm run rm && npm run cp && atom --clear-window-state --dev ."
   },
   "author": "Alexander Elias",
   "license": "MPL-2.0",

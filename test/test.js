@@ -19,7 +19,7 @@ o.la.template = `
 	<div>${template}</div>
 `;
 
-o.html = `
+o.a.html = `
 	<div>${html}</div>
 `;
 
