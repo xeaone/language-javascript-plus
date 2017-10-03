@@ -1,0 +1,46 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+# View -> Syntax -> Open all with current extension as... -> [your syntax choice] -> JavaScript (Plus)
+name: JavaScript (Plus)
+file_extensions:
+  - js
+  - pl.js
+scope: source.js.pl
+contexts:
+  main:
+
+    - match: ""
+      push: Packages/JavaScript/JavaScript.sublime-syntax
+      
+      with_prototype:
+
+      - match: '(\w+\.)*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\s*(:*|(\+*=*))\s*`'
+        push:
+          - meta_content_scope: text.html.basic.embedded.js
+          - include: 'scope:text.html.basic'
+          - match: '`'
+            pop: true
+
+            # template expressions
+          - match: '\$\{'
+            push:
+              - meta_scope: meta.template.expression.js
+              - include: 'scope:source.js'
+              - match: '\}'
+                pop: true
+
+      - match: '(\w+\.)*(css|Css|CSS|style|Style|STYLE)\s*(:*|(\+*=*))\s*`'
+        push:
+          - meta_content_scope: source.css.embedded.js
+          - include: 'scope:source.css'
+          - match: '`'
+            pop: true
+
+            # template expressions
+          - match: '\$\{'
+            push:
+              - meta_scope: meta.template.expression.js
+              - include: 'scope:source.js'
+              - match: '\}'
+                pop: true
