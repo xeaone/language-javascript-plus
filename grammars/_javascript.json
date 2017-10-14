@@ -1,0 +1,136 @@
+{
+	"name": "JavaScriptPlus",
+	"scopeName": "source.js.js+",
+	"injectionSelector": "L:source.js",
+	"patterns": [
+		{ "include": "#html-dot-template" },
+		{ "include": "#css-dot-template" },
+		{ "include": "#html-template" },
+		{ "include": "#css-template" }
+	],
+	"repository": {
+
+		"html-dot-template": {
+			"begin": "(\\w+\\.)+(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(\\+*=*)\\s*(`)",
+			"beginCaptures": {
+				"0": {
+					"name": "language.variable.js"
+				},
+				"3": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"4": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+
+		"css-dot-template": {
+			"begin": "(\\w+\\.)+(style|Style|STYLE|css|Css|CSS)\\s*(\\+*=*)\\s*(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "variable.language.js"
+				},
+				"2": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "source.css"
+				}
+			]
+		},
+
+		"html-template": {
+			"begin": "\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHTML)\\s*(:|\\+*=*)\\s*(`)",
+			"beginCaptures": {
+				"2": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+
+		"css-template": {
+			"begin": "\\s*(style|Style|STYLE|css|Css|CSS)\\s*(:|\\+*=*)\\s*(`)",
+			"beginCaptures": {
+				"2": {
+					"name": "keyword.operator.assignment.js"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "source.css"
+				}
+			]
+		}
+
+	}
+}

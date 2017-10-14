@@ -1,58 +1,133 @@
+var o;
 
 /*
 	HTML
 */
 
-var o = {
-	template: `
+	o = {
+		template: `
+			<div>${template}</div>
+		`,
+		html: `
+			<div>${html}</div>
+		`,
+		innerHtml: `
+			<div>${innerHtml}</div>
+		`,
+		none: `
+			<div>${none}</div>
+		`
+	};
+
+
+	/*
+		dot
+	*/
+	o.template = `
 		<div>${template}</div>
-	`,
-	html: `
+	`;
+
+	o.html = `
 		<div>${html}</div>
-	`,
-	none: `
+	`;
+
+	o.innerHtml = `
+		<div>${innerHtml}</div>
+	`;
+
+	o.none = `
 		<div>${none}</div>
-	`
-};
+	`;
 
-o.la.template = `
-	<div>${template}</div>
-`;
 
-o.a.html = `
-	<div>${html}</div>
-`;
+	/*
+		var
+	*/
+	var template = `
+		<div>${template}</div>
+	`;
 
-o.none = `
-	<div>${none}</div>
-`;
+	var html = `
+		<div>${html}</div>
+	`;
 
-o.innerHTML = `
-	<style>.class { color: blue }</style>
-	<div class="foo">e1</div>
-`;
+	var innerHtml = `
+		<div>${innerHtml}</div>
+	`;
 
-o.innerHTML += `
-	<div id="bar">e2</div>
-`;
+	var none = `
+		<div>${none}</div>
+	`;
 
-var template = `
-	<div>${template}</div>
-`;
 
-var html = `
-	<div>${html}</div>
-`;
+	/*
+		const
+	*/
+	const template = `
+		<div>${template}</div>
+	`;
 
-var none =  `
-	<div>${none}</div>
-`;
+	const html = `
+		<div>${html}</div>
+	`;
+
+	const innerHtml = `
+		<div>${innerHtml}</div>
+	`;
+
+	const none = `
+		<div>${none}</div>
+	`;
+
+	const notWorkingTemplate = `
+		<style>.class { color: blue }</style>
+		<div class="foo">e1</div>
+	`;
+
+
+	/*
+		let
+	*/
+	let template = `
+		<div>${template}</div>
+	`;
+
+	let html = `
+		<div>${html}</div>
+	`;
+
+	let innerHtml = `
+		<div>${innerHtml}</div>
+	`;
+
+	let none = `
+		<div>${none}</div>
+	`;
+
+	/*
+		template tag
+	*/
+	template`
+		<div>${template}</div>
+	`;
+
+	html`
+		<div>${html}</div>
+	`;
+
+	innerHtml`
+		<div>${innerHtml}</div>
+	`;
+
+	none`
+		<div>${none}</div>
+	`;
 
 /*
 	CSS
 */
 
-var o2 = {
+o = {
 	css: `
 		.class {
 			color: url('asdfas');
@@ -70,19 +145,19 @@ var o2 = {
 	`
 };
 
-o2.css = `
+o.css = `
 	.class {
 		color: url('asdfas');
 	}
 `;
 
-o2.style = `
+o.style = `
 	.class {
 		color: url('asdfas');
 	}
 `;
 
-o2.none = `
+o.none = `
 	.class {
 		color: url('asdfas');
 	}
@@ -105,5 +180,3 @@ var none =  `
 		color: url('asdfas');
 	}
 `;
-
-var foo = 'bar';
