@@ -11,6 +11,9 @@ var o;
 		html: `
 			<div>${html}</div>
 		`,
+		html2: /* @html */`
+			<div>${html}</div>
+		`,
 		innerHtml: `
 			<div>${innerHtml}</div>
 		`,
@@ -30,6 +33,10 @@ var o;
 	o.html = `
 		<div>${html}</div>
 	`;
+
+	o.html2: /* @html */`
+		<div>${html}</div>
+	`,
 
 	o.innerHtml = `
 		<div>${innerHtml}</div>
@@ -51,6 +58,10 @@ var o;
 		<div>${html}</div>
 	`;
 
+	var html2 = /* @html */`
+		<div>${html}</div>
+	`;
+
 	var innerHtml = `
 		<div>${innerHtml}</div>
 	`;
@@ -68,6 +79,10 @@ var o;
 	`;
 
 	const html = `
+		<div>${html}</div>
+	`;
+
+	const html2 = /* @html */`
 		<div>${html}</div>
 	`;
 
@@ -96,6 +111,10 @@ var o;
 		<div>${html}</div>
 	`;
 
+	let html2 = /* @html */`
+		<div>${html}</div>
+	`;
+
 	let innerHtml = `
 		<div>${innerHtml}</div>
 	`;
@@ -115,6 +134,10 @@ var o;
 		<div>${html}</div>
 	`;
 
+	/* @html */`
+		<div>${html}</div>
+	`;
+
 	innerHtml`
 		<div>${innerHtml}</div>
 	`;
@@ -129,6 +152,11 @@ var o;
 
 o = {
 	css: `
+		.class {
+			color: url('asdfas');
+		}
+	`,
+	css2: /* @css */`
 		.class {
 			color: url('asdfas');
 		}
@@ -151,6 +179,12 @@ o.css = `
 	}
 `;
 
+o.css2 = /* @css */`
+	.class {
+		color: url('asdfas');
+	}
+`;
+
 o.style = `
 	.class {
 		color: url('asdfas');
@@ -164,6 +198,12 @@ o.none = `
 `;
 
 var css = `
+	.class {
+		color: url('asdfas');
+	}
+`;
+
+var css2 = /* @css */`
 	.class {
 		color: url('asdfas');
 	}

@@ -4,7 +4,9 @@
 	"injectionSelector": "L:source.js",
 	"patterns": [
 		{ "include": "#html" },
-		{ "include": "#css" }
+		{ "include": "#css" },
+		{ "include": "#html-comment-template" },
+		{ "include": "#css-comment-template" }
 	],
 	"repository": {
 
@@ -48,6 +50,64 @@
 				}
 			},
 			"patterns": [
+				{
+					"include": "source.css"
+				}
+			]
+		},
+
+		"html-comment-template": {
+			"begin": "(\/\\*\\s?@html\\s?\\*\/)\\s?(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.begin.js"
+				},
+				"2": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+
+		"css-comment-template": {
+			"begin": "(\/\\*\\s?@css\\s?\\*\/)\\s?(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.begin.css"
+				},
+				"2": {
+					"name": "punctuation.definition.string.begin.js"
+				}
+			},
+			"end": "`",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#string_escapes"
+				},
+				{
+					"include": "#interpolated_js"
+				},
 				{
 					"include": "source.css"
 				}
