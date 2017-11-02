@@ -11,7 +11,7 @@ var o;
 		html: `
 			<div>${html}</div>
 		`,
-		html2: /* @html */`
+		html2: /*@html*/`
 			<div>${html}</div>
 		`,
 		innerHtml: `
@@ -86,7 +86,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	const innerHtml = `
+	const innerHTML = `
 		<div>${innerHtml}</div>
 	`;
 
@@ -134,7 +134,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	/* @html */`
+	tag/* @html */`
 		<div>${html}</div>
 	`;
 

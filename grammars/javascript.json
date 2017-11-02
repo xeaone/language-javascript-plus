@@ -11,12 +11,12 @@
 	"repository": {
 
 		"html": {
-			"begin": "[\\s\\S](template|Template|TEMPLATE|html|Html|HTML)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "(template|Template|TEMPLATE|html|Html|HTML|innerHtml|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
 			"beginCaptures": {
-				"3": {
+				"2": {
 					"name": "keyword.operator.assignment.js"
 				},
-				"4": {
+				"3": {
 					"name": "punctuation.definition.string.begin.js"
 				}
 			},
@@ -34,12 +34,12 @@
 		},
 
 		"css": {
-			"begin": "[\\s\\S](style|Style|STYLE|css|Css|CSS)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "(style|Style|STYLE|css|Css|CSS)\\s*(:*\\+*=*)\\s*(`)",
 			"beginCaptures": {
-				"3": {
+				"2": {
 					"name": "keyword.operator.assignment.js"
 				},
-				"4": {
+				"3": {
 					"name": "punctuation.definition.string.begin.js"
 				}
 			},
@@ -57,7 +57,7 @@
 		},
 
 		"html-comment": {
-			"begin": "(\/\\*\\s?@html\\s?\\*\/)\\s?(`)",
+			"begin": "(\/\\*\\s*@html\\s*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.begin.js"
@@ -86,10 +86,10 @@
 		},
 
 		"css-comment": {
-			"begin": "(\/\\*\\s?@css\\s?\\*\/)\\s?(`)",
+			"begin": "(\/\\*\\s*@css\\s*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.comment.begin.css"
+					"name": "punctuation.definition.comment.begin.js"
 				},
 				"2": {
 					"name": "punctuation.definition.string.begin.js"
