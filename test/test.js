@@ -5,16 +5,13 @@ var o;
 */
 
 	o = {
-		template: `
-			<div>${template}</div>
-		`,
 		html: `
 			<div>${html}</div>
 		`,
-		html2: /*arbitrary comment with html in the middle*/`
+		comment: /*html*/`
 			<div>${html}</div>
 		`,
-		innerHtml: `
+		innerHTML: `
 			<div>${innerHtml}</div>
 		`,
 		none: `
@@ -22,23 +19,15 @@ var o;
 		`
 	};
 
-
-	/*
-		dot
-	*/
-	o.template = `
-		<div>${template}</div>
-	`;
-
 	o.html = `
 		<div>${html}</div>
 	`;
 
-	o.html2 = /*arbitrary comment with HTML in the middle*/`
+	o.comment = /*HTML*/`
 		<div>${html}</div>
 	`,
 
-	o.innerHtml = `
+	o.innerHTML = `
 		<div>${innerHtml}</div>
 	`;
 
@@ -46,23 +35,15 @@ var o;
 		<div>${none}</div>
 	`;
 
-
-	/*
-		var
-	*/
-	var template = `
-		<div>${template}</div>
-	`;
-
 	var html = `
 		<div>${html}</div>
 	`;
 
-	var html2 = /*arbitrary comment with html in the middle*/`
+	var comment = /*html*/`
 		<div>${html}</div>
 	`;
 
-	var innerHtml = `
+	var innerHTML = `
 		<div>${innerHtml}</div>
 	`;
 
@@ -70,19 +51,11 @@ var o;
 		<div>${none}</div>
 	`;
 
-
-	/*
-		const
-	*/
-	const template = `
-		<div>${template}</div>
-	`;
-
 	const html = `
 		<div>${html}</div>
 	`;
 
-	const html2 = /*arbitrary comment with HTML in the middle*/`
+	const comment = /*HTML*/`
 		<div>${html}</div>
 	`;
 
@@ -94,28 +67,15 @@ var o;
 		<div>${none}</div>
 	`;
 
-	const notWorkingTemplate = `
-		<style>.class { color: blue }</style>
-		<div class="foo">e1</div>
-	`;
-
-
-	/*
-		let
-	*/
-	let template = `
-		<div>${template}</div>
-	`;
-
 	let html = `
 		<div>${html}</div>
 	`;
 
-	let html2 = /*arbitrary comment with html in the middle*/`
+	let comment = /*html*/`
 		<div>${html}</div>
 	`;
 
-	let innerHtml = `
+	let innerHTML = `
 		<div>${innerHtml}</div>
 	`;
 
@@ -123,22 +83,15 @@ var o;
 		<div>${none}</div>
 	`;
 
-	/*
-		template tag
-	*/
-	template`
-		<div>${template}</div>
-	`;
-
 	html`
 		<div>${html}</div>
 	`;
 
-	tag/*arbitrary comment with HTML in the middle*/`
+	comment/*HTML*/`
 		<div>${html}</div>
 	`;
 
-	innerHtml`
+	innerHTML`
 		<div>${innerHtml}</div>
 	`;
 
@@ -150,73 +103,145 @@ var o;
 	CSS
 */
 
-o = {
-	css: `
+	o = {
+		css: `
+			.class {
+				color: url('asdfas');
+			}
+		`,
+		comment:/*css*/`
+			.class {
+				color: url('asdfas');
+			}
+		`,
+		style: `
+			.class {
+				color: url('asdfas');
+			}
+		`,
+		none: `
+			.class {
+				color: url('asdfas');
+			}
+		`
+	};
+
+	o.css = `
 		.class {
 			color: url('asdfas');
 		}
-	`,
-	css2: /*arbitrary comment with css in the middle*/`
+	`;
+
+	o.comment = /*CSS*/`
 		.class {
 			color: url('asdfas');
 		}
-	`,
-	style: `
+	`;
+
+	o.style = `
 		.class {
 			color: url('asdfas');
 		}
-	`,
-	none: `
+	`;
+
+	o.none = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	var css = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	var comment = /*css*/`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	var style = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	var none =  `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	let css = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	let comment = /*css*/`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	let style = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	let none =  `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	const css = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	const comment = /*css*/`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	const style = `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	const none =  `
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	css`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	comment/*css*/`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	style`
+		.class {
+			color: url('asdfas');
+		}
+	`;
+
+	none`
 		.class {
 			color: url('asdfas');
 		}
 	`
-};
-
-o.css = `
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-o.css2 = /*arbitrary comment with CSS in the middle*/`
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-o.style = `
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-o.none = `
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-var css = `
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-var css2 = /*arbitrary comment with css in the middle*/`
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-var style = `
-	.class {
-		color: url('asdfas');
-	}
-`;
-
-var none =  `
-	.class {
-		color: url('asdfas');
-	}
-`;

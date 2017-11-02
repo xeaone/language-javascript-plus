@@ -1,30 +1,35 @@
 
 # JavaScript Plus
-Syntax highlighting for template strings in Atom. Currently supporting HTML and CSS highlighting.
+Syntax highlighting for template strings in Atom
 
 ## Install
 `apm install language-javascript-plus`
 
 ## Usage
-Simply declare a variable or property with the name html, template, innerHTML, css, or style then use the backtick. HTML and CSS will be using their own syntax highlighting.
+Simply declare a variable, property, template tag, or multiline comment with html, innerHTML, css, or style then use backtick for your template string. HTML and CSS will be using their own syntax highlighting.
 
-Let me know what you think suggestions are welcome and please inform me of any bugs.
+## Changes
+- Template not supported any more. Please use the new comment style.
 
 ## Triggers
-- `innerHTML: `
-- `innerHTML = `
 
-- `template: `
-- `template = `
+- Comment Style
+	- `/* html */`
+	- `/* css */`
 
-- `html: `
-- `html = `
+- Variable Style
+	- `html: `
+	- `html = `
+	- `.html = `
 
-- `style: `
-- `style = `
+	- `css: `
+	- `css = `
+	- `.css = `
 
-- `css: `
-- `css = `
-
-- `/* html */`
-- `/* css */`
+- These are only supported for native use cases
+	- `style: `
+	- `style = `
+	- `.style = `
+	- `innerHTML: `
+	- `innerHTML = `
+	- `.innerHTML = `

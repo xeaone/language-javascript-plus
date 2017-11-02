@@ -15,7 +15,7 @@
 	"repository": {
 
 		"html": {
-			"begin": "(template|Template|TEMPLATE|html|Html|HTML|innerHtml|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "([hH][tT][mM][lL]|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"2": {
 					"name": "keyword.operator.assignment.js"
@@ -38,7 +38,7 @@
 		},
 
 		"css": {
-			"begin": "(style|Style|STYLE|css|Css|CSS)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "([cC][sS][sS]|style)\\s*(:*\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"2": {
 					"name": "keyword.operator.assignment.js"
@@ -61,7 +61,7 @@
 		},
 
 		"html-dot": {
-			"begin": "\\.?(template|Template|TEMPLATE|html|Html|HTML|innerHtml|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "\\.([hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "language.variable.js"
@@ -87,7 +87,7 @@
 		},
 
 		"css-dot": {
-			"begin": "\\.?(style|Style|STYLE|css|Css|CSS)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "\\.([cC][sS][sS]|style)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "language.variable.js"
@@ -113,7 +113,7 @@
 		},
 
 		"html-const": {
-			"begin": "(const)\\s*(template|Template|TEMPLATE|html|Html|HTML|innerHtml|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "(const)\\s+([hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.control.js"
@@ -142,7 +142,7 @@
 		},
 
 		"css-const": {
-			"begin": "(const)\\s?(style|Style|STYLE|css|Css|CSS)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "(const)\\s+([cC][sS][sS]|style)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.control.js"
@@ -171,7 +171,7 @@
 		},
 
 		"html-comment": {
-			"begin": "(\/\\*.*\\b[hH][tT][mM][lL]\\b.*\\*\/)\\s*(`)",
+			"begin": "(\/\\*\\s*[hH][tT][mM][lL]\\s*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.begin.js"
@@ -200,7 +200,7 @@
 		},
 
 		"css-comment": {
-			"begin": "(\/\\*.*\\b[cC][sS][sS]\\b.*\\*\/)\\s*(`)",
+			"begin": "(\/\\*\\s*[cC][sS][sS]\\s*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.begin.js"
