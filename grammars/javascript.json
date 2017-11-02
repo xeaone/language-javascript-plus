@@ -171,7 +171,7 @@
 		},
 
 		"html-comment": {
-			"begin": "(\/\\*\\s*html\\s*\\*\/)\\s*(`)",
+			"begin": "(\/\\*.*\\b[hH][tT][mM][lL]\\b.*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.begin.js"
@@ -200,7 +200,7 @@
 		},
 
 		"css-comment": {
-			"begin": "(\/\\*\\s*css\\s*\\*\/)\\s*(`)",
+			"begin": "(\/\\*.*\\b[cC][sS][sS]\\b.*\\*\/)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.begin.js"
