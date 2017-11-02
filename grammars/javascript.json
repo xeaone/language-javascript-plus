@@ -5,8 +5,8 @@
 	"patterns": [
 		{ "include": "#html" },
 		{ "include": "#css" },
-		{ "include": "#html-comment-template" },
-		{ "include": "#css-comment-template" }
+		{ "include": "#html-comment" },
+		{ "include": "#css-comment" }
 	],
 	"repository": {
 
@@ -56,7 +56,7 @@
 			]
 		},
 
-		"html-comment-template": {
+		"html-comment": {
 			"begin": "(\/\\*\\s?@html\\s?\\*\/)\\s?(`)",
 			"beginCaptures": {
 				"1": {
@@ -85,7 +85,7 @@
 			]
 		},
 
-		"css-comment-template": {
+		"css-comment": {
 			"begin": "(\/\\*\\s?@css\\s?\\*\/)\\s?(`)",
 			"beginCaptures": {
 				"1": {

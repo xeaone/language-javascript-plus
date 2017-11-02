@@ -34,7 +34,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	o.html2: /* @html */`
+	o.html2 = /* @html */`
 		<div>${html}</div>
 	`,
 
