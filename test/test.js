@@ -11,7 +11,7 @@ var o;
 		html: `
 			<div>${html}</div>
 		`,
-		html2: /*html*/`
+		html2: /*arbitrary comment with html in the middle*/`
 			<div>${html}</div>
 		`,
 		innerHtml: `
@@ -34,7 +34,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	o.html2 = /* html */`
+	o.html2 = /*arbitrary comment with HTML in the middle*/`
 		<div>${html}</div>
 	`,
 
@@ -58,7 +58,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	var html2 = /* html */`
+	var html2 = /*arbitrary comment with html in the middle*/`
 		<div>${html}</div>
 	`;
 
@@ -82,7 +82,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	const html2 = /* html */`
+	const html2 = /*arbitrary comment with HTML in the middle*/`
 		<div>${html}</div>
 	`;
 
@@ -111,7 +111,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	let html2 = /* html */`
+	let html2 = /*arbitrary comment with html in the middle*/`
 		<div>${html}</div>
 	`;
 
@@ -134,7 +134,7 @@ var o;
 		<div>${html}</div>
 	`;
 
-	tag/* html */`
+	tag/*arbitrary comment with HTML in the middle*/`
 		<div>${html}</div>
 	`;
 
@@ -156,7 +156,7 @@ o = {
 			color: url('asdfas');
 		}
 	`,
-	css2: /* css */`
+	css2: /*arbitrary comment with css in the middle*/`
 		.class {
 			color: url('asdfas');
 		}
@@ -179,7 +179,7 @@ o.css = `
 	}
 `;
 
-o.css2 = /* css */`
+o.css2 = /*arbitrary comment with CSS in the middle*/`
 	.class {
 		color: url('asdfas');
 	}
@@ -203,7 +203,7 @@ var css = `
 	}
 `;
 
-var css2 = /* css */`
+var css2 = /*arbitrary comment with css in the middle*/`
 	.class {
 		color: url('asdfas');
 	}
