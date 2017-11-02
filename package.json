@@ -1,6 +1,6 @@
 {
   "name": "language-javascript-plus",
-  "version": "1.6.0",
+  "version": "1.4.0",
   "description": "Syntax highlighting for template strings in Atom",
   "engines": {
     "atom": "*"
@@ -16,10 +16,6 @@
   "directories": {
     "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlexanderElias/language-javascript-plus.git"
-  },
   "keywords": [
     "language",
     "javascript",
@@ -29,6 +25,10 @@
     "syntax",
     "highliting"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderElias/language-javascript-plus.git"
+  },
   "bugs": {
     "url": "https://github.com/AlexanderElias/language-javascript-plus/issues"
   },
