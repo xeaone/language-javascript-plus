@@ -4,6 +4,10 @@ var o;
 	HTML
 */
 
+var var1 = `some html`;
+var vae2 = `some more`;
+
+
 	o = {
 		html: `
 			<div>${html}</div>

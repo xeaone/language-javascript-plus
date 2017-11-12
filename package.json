@@ -1,6 +1,6 @@
 {
   "name": "language-javascript-plus",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "description": "Syntax highlighting for template strings in Atom",
   "engines": {
     "atom": "*"
