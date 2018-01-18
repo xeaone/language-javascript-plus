@@ -1,36 +1,36 @@
 {
-  "name": "language-javascript-plus",
-  "version": "1.7.8",
-  "description": "Syntax highlighting for template strings in Atom",
-  "engines": {
-    "atom": "*"
-  },
-  "scripts": {
-    "rm": "rm -rf ~/.atom/dev/packages/language-javascript-plus",
-    "cp": "cp -r ../language-javascript-plus ~/.atom/dev/packages/.",
-    "l": "npm run rm && npm run cp && atom --clear-window-state --dev ."
-  },
-  "author": "Alexander Elias",
-  "license": "MPL-2.0",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "keywords": [
-    "language",
-    "javascript",
-    "plus",
-    "template",
-    "literals",
-    "syntax",
-    "highliting"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:AlexanderElias/language-javascript-plus.git"
-  },
-  "bugs": {
-    "url": "https://github.com/AlexanderElias/language-javascript-plus/issues"
-  },
-  "homepage": "https://github.com/AlexanderElias/language-javascript-plus#readme"
+	"name": "language-javascript-plus",
+	"version": "1.8.0",
+	"description": "Syntax highlighting for template strings in Atom",
+	"engines": {
+		"atom": "*"
+	},
+	"scripts": {
+		"rm": "rm -rf ~/.atom/dev/packages/language-javascript-plus",
+		"cp": "cp -r ../language-javascript-plus ~/.atom/dev/packages/.",
+		"l": "npm run rm && npm run cp && atom --clear-window-state --dev ."
+	},
+	"author": "Alexander Elias",
+	"license": "MPL-2.0",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"keywords": [
+		"language",
+		"javascript",
+		"plus",
+		"template",
+		"literals",
+		"syntax",
+		"highliting"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:AlexanderElias/language-javascript-plus.git"
+	},
+	"bugs": {
+		"url": "https://github.com/AlexanderElias/language-javascript-plus/issues"
+	},
+	"homepage": "https://github.com/AlexanderElias/language-javascript-plus#readme"
 }

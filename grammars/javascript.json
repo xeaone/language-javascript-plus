@@ -15,7 +15,7 @@
 	"repository": {
 
 		"html": {
-			"begin": "([hH][tT][mM][lL]|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
+			"begin": "([tT][eE][mM][pP][lL][aA][tT]|[hH][tT][mM][lL]|innerHTML)\\s*(:*\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"2": {
 					"name": "keyword.operator.assignment.js"
@@ -61,7 +61,7 @@
 		},
 
 		"html-dot": {
-			"begin": "\\.([hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
+			"begin": "\\.([tT][eE][mM][pP][lL][aA][tT]|[hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "language.variable.js"
@@ -113,7 +113,7 @@
 		},
 
 		"html-const": {
-			"begin": "(const)\\s+([hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
+			"begin": "(const)\\s+([tT][eE][mM][pP][lL][aA][tT]|[hH][tT][mM][lL]|innerHTML)\\s*(\\+*=*)\\s*(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.control.js"

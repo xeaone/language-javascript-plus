@@ -18,6 +18,9 @@ Simply declare a variable, property, template tag, or multiline comment with htm
 	- `/* css */`
 
 - Variable Style
+	- `template: `
+	- `template = `
+	- `.template `
 	- `html: `
 	- `html = `
 	- `.html = `
