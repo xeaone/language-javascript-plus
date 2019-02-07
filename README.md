@@ -6,7 +6,7 @@ Syntax highlighting for template strings in Atom
 `apm install language-javascript-plus`
 
 ## Usage
-Simply declare a template tag with a prefix multiline comment with html or css and you get syntax highliting. It is hacky because of the new tree-sitter parser and no documentation. 
+Simply declare a template tag with a prefix multiline comment with html or css and you get syntax highliting. 
 
 ## Triggers
 
@@ -14,8 +14,15 @@ Simply declare a template tag with a prefix multiline comment with html or css a
 	- `/*html*/`
 	- `/*css*/`
 
+## Example
+```javascript
+var template = /*html*/`
+	<div>will have syntax highliting</div>
+`;
+```
+
 ## Authors
-[AlexanderElias](https://github.com/AlexanderElias)
+[Alexander Elias](https://github.com/vokeio)
 
 ## License
 [Why You Should Choose MPL-2.0](http://veldstra.org/2016/12/09/you-should-choose-mpl2-for-your-opensource-project.html)

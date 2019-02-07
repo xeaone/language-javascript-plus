@@ -1,6 +1,0 @@
-{
-	"name": "JavaScriptPlus",
-	"scopeName": "source.js",
-	"injectionSelector": "L:source.js",
-	"injectionRegex": "html|HTML|css|CSS"
-}

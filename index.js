@@ -1,30 +1,47 @@
 
 exports.activate = function () {
+	for (const scopeName of ['source.js','source.ts','source.flow']) {
 
-	atom.grammars.addInjectionPoint('source.js', {
+		atom.grammars.addInjectionPoint(scopeName, { type: 'template_string',
 
-		type: 'comment',
+			language (templateNode) {
+				const node = templateNode.previousSibling;
 
-		language (data) {
-			const languages = ['html', 'css'];
-			const text = data.text.toLowerCase().replace(/\/|\*/g, '');
+				if (node.type === 'comment') {
+					const languages = ['html', 'css'];
+					const text = node.text.toLowerCase().replace(/\/|\*/g, '');
 
-			console.log(text);
-			console.log(data);
+					if (languages.includes(text)) {
+						return text;
+					}
+				}
+			},
 
-			if (languages.includes(text)) {
-				console.log(true);
-				return text;
+			content (templateNode) {
+				return templateNode;
 			}
 
-		},
+		});
 
-		content (data) {
-			if (data.nextSibling.type === 'template_string') {
-				return data.nextSibling;
+		atom.grammars.addInjectionPoint(scopeName, { type: 'comment',
+
+			language (commentNode) {
+				const languages = ['html', 'css'];
+				const text = commentNode.text.toLowerCase().replace(/\/|\*/g, '');
+
+				if (languages.includes(text)) {
+					return text;
+				}
+			},
+
+			content (commentNode) {
+				const node = commentNode.nextSibling;
+				if (node.type === 'template_string') {
+					return node;
+				}
 			}
-		}
 
-	});
+		});
 
+	}
 };
