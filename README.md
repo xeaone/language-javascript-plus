@@ -6,36 +6,13 @@ Syntax highlighting for template strings in Atom
 `apm install language-javascript-plus`
 
 ## Usage
-Simply declare a variable, property, template tag, or multiline comment with html, innerHTML, css, or style then use backtick for your template string. HTML and CSS will be using their own syntax highlighting.
-
-## Changes
-- Template not supported any more. Please use the new comment style.
+Simply declare a template tag with a prefix multiline comment with html or css and you get syntax highliting. It is hacky because of the new tree-sitter parser and no documentation. 
 
 ## Triggers
 
 - Comment Style
-	- `/* html */`
-	- `/* css */`
-
-- Variable Style
-	- `template: `
-	- `template = `
-	- `.template `
-	- `html: `
-	- `html = `
-	- `.html = `
-
-	- `css: `
-	- `css = `
-	- `.css = `
-
-- These are only supported for native use cases
-	- `style: `
-	- `style = `
-	- `.style = `
-	- `innerHTML: `
-	- `innerHTML = `
-	- `.innerHTML = `
+	- `/*html*/`
+	- `/*css*/`
 
 ## Authors
 [AlexanderElias](https://github.com/AlexanderElias)
