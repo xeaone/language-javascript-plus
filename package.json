@@ -32,8 +32,5 @@
 	"bugs": {
 		"url": "https://github.com/vokeio/language-javascript-plus/issues"
 	},
-	"homepage": "https://github.com/vokeio/language-javascript-plus#readme",
-	"dependencies": {
-		"tree-sitter-javascript": "^0.13.10"
-	}
+	"homepage": "https://github.com/vokeio/language-javascript-plus#readme"
 }

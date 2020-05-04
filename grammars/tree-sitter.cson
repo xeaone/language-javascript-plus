@@ -1,6 +1,4 @@
 
 name: 'JavaScriptPlus'
 scopeName: 'source.js.plus'
-type: 'tree-sitter'
-parser: 'tree-sitter-javascript'
 injectionRegex: 'html|HTML|css|CSS'
